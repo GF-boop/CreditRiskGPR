@@ -1,0 +1,33 @@
+=====================================================
+   Résumé du Meilleur Modèle pour: Slovakia 
+=====================================================
+
+Critère de sélection : AIC (sur l'échantillon d'entraînement)
+AIC du modèle sélectionné : 44.68079 
+
+--- Diagnostic de Performance (sur l'échantillon de test) ---
+RMSE (Out-of-Sample) : 2.764753 
+
+--- Détails du Modèle ---
+
+Call:
+lm(formula = formula, data = train_df)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.88222 -0.22029  0.02095  0.24719  0.86567 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -0.66346    0.09767  -6.793 6.29e-07 ***
+INF_lag1     0.14049    0.03388   4.146 0.000391 ***
+INF_lag2     0.20330    0.03687   5.514 1.32e-05 ***
+INF_lag3     0.18496    0.04363   4.239 0.000311 ***
+INF_lag4     0.15523    0.04209   3.688 0.001217 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.4785 on 23 degrees of freedom
+Multiple R-squared:  0.5985,	Adjusted R-squared:  0.5286 
+F-statistic:  8.57 on 4 and 23 DF,  p-value: 0.0002185
+

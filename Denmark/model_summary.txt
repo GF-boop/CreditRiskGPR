@@ -1,0 +1,33 @@
+=====================================================
+   Résumé du Meilleur Modèle pour: Denmark 
+=====================================================
+
+Critère de sélection : AIC (sur l'échantillon d'entraînement)
+AIC du modèle sélectionné : 73.68713 
+
+--- Diagnostic de Performance (sur l'échantillon de test) ---
+RMSE (Out-of-Sample) : 2.140082 
+
+--- Détails du Modèle ---
+
+Call:
+lm(formula = formula, data = train_df)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.94407 -0.01638  0.18819  0.43830  0.88379 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)   
+(Intercept) -0.46985    0.15909  -2.953  0.00713 **
+INF_lag3     0.16160    0.07347   2.199  0.03817 * 
+INF_lag4     0.20760    0.08484   2.447  0.02247 * 
+INF_lag5     0.21158    0.08489   2.492  0.02033 * 
+INF_lag6     0.17471    0.07521   2.323  0.02939 * 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.8033 on 23 degrees of freedom
+Multiple R-squared:  0.2611,	Adjusted R-squared:  0.1325 
+F-statistic: 2.031 on 4 and 23 DF,  p-value: 0.1234
+

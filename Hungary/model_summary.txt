@@ -1,0 +1,34 @@
+=====================================================
+   Résumé du Meilleur Modèle pour: Hungary 
+=====================================================
+
+Critère de sélection : AIC (sur l'échantillon d'entraînement)
+AIC du modèle sélectionné : 45.27468 
+
+--- Diagnostic de Performance (sur l'échantillon de test) ---
+RMSE (Out-of-Sample) : 0.7959271 
+
+--- Détails du Modèle ---
+
+Call:
+lm(formula = formula, data = train_df)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.78843 -0.23288 -0.06287  0.20347  1.03256 
+
+Coefficients:
+                Estimate Std. Error t value Pr(>|t|)    
+(Intercept)     0.221005   0.109720   2.014 0.056369 .  
+GDP_lag2       -0.047263   0.010902  -4.335 0.000266 ***
+EPU_lag2       -0.008051   0.003094  -2.602 0.016279 *  
+EPU_lag6        0.008985   0.002763   3.252 0.003653 ** 
+FCI_total_lag0  2.631195   0.289737   9.081 6.76e-09 ***
+FCI_total_lag1 -1.988614   0.299602  -6.638 1.13e-06 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.4772 on 22 degrees of freedom
+Multiple R-squared:  0.8376,	Adjusted R-squared:  0.8007 
+F-statistic:  22.7 on 5 and 22 DF,  p-value: 5.229e-08
+

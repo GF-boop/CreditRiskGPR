@@ -1,0 +1,34 @@
+=====================================================
+   Résumé du Meilleur Modèle pour: Austria 
+=====================================================
+
+Critère de sélection : AIC (sur l'échantillon d'entraînement)
+AIC du modèle sélectionné : 61.75001 
+
+--- Diagnostic de Performance (sur l'échantillon de test) ---
+RMSE (Out-of-Sample) : 1.236408 
+
+--- Détails du Modèle ---
+
+Call:
+lm(formula = formula, data = train_df)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.19666 -0.15936  0.00058  0.30868  1.13629 
+
+Coefficients:
+                Estimate Std. Error t value Pr(>|t|)    
+(Intercept)    -0.491726   0.148995  -3.300 0.003260 ** 
+GDP_lag1       -0.027361   0.011576  -2.364 0.027348 *  
+GDP_lag4        0.040366   0.011465   3.521 0.001926 ** 
+GDP_lag5        0.047486   0.011006   4.315 0.000280 ***
+EPU_lag2        0.012951   0.003761   3.443 0.002319 ** 
+FCI_total_lag2 -0.600764   0.150428  -3.994 0.000612 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.6404 on 22 degrees of freedom
+Multiple R-squared:  0.6624,	Adjusted R-squared:  0.5857 
+F-statistic: 8.633 on 5 and 22 DF,  p-value: 0.0001202
+

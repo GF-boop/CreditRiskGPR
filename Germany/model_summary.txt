@@ -1,0 +1,30 @@
+=====================================================
+   Résumé du Meilleur Modèle pour: Germany 
+=====================================================
+
+Critère de sélection : AIC (sur l'échantillon d'entraînement)
+AIC du modèle sélectionné : 58.58535 
+
+--- Diagnostic de Performance (sur l'échantillon de test) ---
+RMSE (Out-of-Sample) : 1.931569 
+
+--- Détails du Modèle ---
+
+Call:
+lm(formula = formula, data = train_df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1.1865 -0.4279  0.1141  0.3464  1.0224 
+
+Coefficients:
+               Estimate Std. Error t value Pr(>|t|)    
+(Intercept)     -0.3945     0.1274  -3.097  0.00465 ** 
+FCI_total_lag2  -0.7914     0.1362  -5.813    4e-06 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.6422 on 26 degrees of freedom
+Multiple R-squared:  0.5651,	Adjusted R-squared:  0.5484 
+F-statistic: 33.79 on 1 and 26 DF,  p-value: 3.997e-06
+
