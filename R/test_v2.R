@@ -34,19 +34,37 @@ f_Z_estimation <- function(vect_TD) {
   Z_estim <- (qnorm(mean(vect_TD)) - qnorm(vect_TD) * sqrt(1 - rho_opt)) / sqrt(rho_opt)
   return(list(Z = Z_estim, rho = rho_opt))
 }
-data_risk <- read.csv("data_risk_EBA.csv", header = TRUE, sep = ";")
+data_risk <- read.csv("../data/data_risk_EBA.csv", header = TRUE, sep = ";")
 data_risk <- data_risk[data_risk$Date != "31/12/2024", ]
 countries <- unique(data_risk$Country)
 Z_results <- lapply(countries, function(c) f_Z_estimation(data_risk$Corpo_DR_WA[data_risk$Country == c]))
 Z_country <- sapply(Z_results, `[[`, "Z"); colnames(Z_country) <- countries
-data_macro <- read.csv("data_macro_estimation.csv", header = TRUE, sep = ";")
-data_macro_FCI <- read.csv("data_macro_estimation_FCI.csv", header = TRUE, sep = ";")
-all_data <- dplyr::full_join(data_macro, data_macro_FCI, by = "Date")
-all_data$Date <- as.Date(all_data$Date, tryFormats = c("%d/%m/%Y"))
-all_data <- all_data %>%
-  dplyr::mutate(dplyr::across(-Date, ~ as.numeric(gsub(",", ".", .)))) %>%
-  dplyr::arrange(Date) %>%
-  dplyr::mutate(INF = Infla - dplyr::lag(Infla), EPU = EPU_world - dplyr::lag(EPU_world))
+data_macro <- read.csv("../data/data_macro_statio.csv", header = TRUE, sep = ",")
+
+year <- floor(data_macro$Date)
+fraction <- data_macro$Date %% 1
+
+final_month <- integer(length(year))
+final_year <- integer(length(year))
+
+for (i in seq_along(data_macro$Date)) {
+  if (fraction[i] == 0.25) {
+    final_month[i] <- 3
+    final_year[i] <- year[i]
+  } else if (fraction[i] == 0.50) {
+    final_month[i] <- 6
+    final_year[i] <- year[i]
+  } else if (fraction[i] == 0.75) {
+    final_month[i] <- 9
+    final_year[i] <- year[i]
+  } else if (fraction[i] == 0.00) {
+    final_month[i] <- 12
+    final_year[i] <- year[i] - 1 # Use the previous year
+  }
+}
+
+data_macro$Date <- as.Date(paste(final_year, final_month, "01", sep="-"))
+
 nb_lags <- 6; lag_indices <- 0:nb_lags
 vars_to_lag <- c("GDP", "INF", "EPU", "FCI_total", "FCI_corpo", "FCI_house",
                  grep("FCI_.*_[A-Z]{2}", names(all_data), value = TRUE))
@@ -57,7 +75,7 @@ data_lags$Date <- all_data$Date
 
 
 #########################################################################
-# ---      FONCTION DE CALCUL POUR UN PAYS (SANS ÉCRITURE)            --- #
+# ---      FONCTION DE CALCUL POUR UN PAYS                          --- #
 #########################################################################
 
 compute_model_for_country <- function(country_to_model) {
