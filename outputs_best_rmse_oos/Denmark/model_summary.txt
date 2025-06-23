@@ -1,0 +1,32 @@
+=====================================================
+  Résumé du Meilleur Modèle pour: Denmark 
+=====================================================
+
+Critère de sélection : AIC (sur l'échantillon d'entraînement)
+AIC du modèle sélectionné : 72.33059 
+
+--- Diagnostic de Performance (sur l'échantillon de test) ---
+RMSE (Out-of-Sample) : 1.614759 
+
+--- Détails du Modèle ---
+
+Call:
+lm(formula = formula, data = train_df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1.7694 -0.5324  0.2381  0.5299  1.1685 
+
+Coefficients:
+                       Estimate Std. Error t value Pr(>|t|)  
+(Intercept)             -0.2870     0.1567  -1.832   0.0794 .
+Denmark_GDPGROWTH_lag0 -11.5729     5.2393  -2.209   0.0370 *
+Denmark_GDPGROWTH_lag4  13.7415     5.5743   2.465   0.0212 *
+EPU_world_LD_lag0       -2.3718     1.0778  -2.201   0.0376 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.7955 on 24 degrees of freedom
+Multiple R-squared:  0.2439,	Adjusted R-squared:  0.1494 
+F-statistic:  2.58 on 3 and 24 DF,  p-value: 0.07706
+

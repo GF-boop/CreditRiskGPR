@@ -1,0 +1,32 @@
+=====================================================
+  Résumé du Meilleur Modèle pour: Belgium 
+=====================================================
+
+Critère de sélection : AIC (sur l'échantillon d'entraînement)
+AIC du modèle sélectionné : 62.00994 
+
+--- Diagnostic de Performance (sur l'échantillon de test) ---
+RMSE (Out-of-Sample) : 0.3725453 
+
+--- Détails du Modèle ---
+
+Call:
+lm(formula = formula, data = train_df)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.38029 -0.40205  0.03959  0.50467  1.04887 
+
+Coefficients:
+                    Estimate Std. Error t value Pr(>|t|)  
+(Intercept)         -0.09005    0.13507  -0.667   0.5113  
+FCI_house_BE_D_lag4  1.85243    0.81114   2.284   0.0315 *
+FCI_total_EU_lag3    1.04569    0.41867   2.498   0.0198 *
+FCI_total_EU_lag4   -0.98292    0.41889  -2.346   0.0275 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.6616 on 24 degrees of freedom
+Multiple R-squared:  0.4051,	Adjusted R-squared:  0.3307 
+F-statistic: 5.447 on 3 and 24 DF,  p-value: 0.005313
+

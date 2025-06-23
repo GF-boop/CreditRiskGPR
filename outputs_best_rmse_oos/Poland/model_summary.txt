@@ -1,0 +1,30 @@
+=====================================================
+  Résumé du Meilleur Modèle pour: Poland 
+=====================================================
+
+Critère de sélection : AIC (sur l'échantillon d'entraînement)
+AIC du modèle sélectionné : 37.66616 
+
+--- Diagnostic de Performance (sur l'échantillon de test) ---
+RMSE (Out-of-Sample) : 0.3835304 
+
+--- Détails du Modèle ---
+
+Call:
+lm(formula = formula, data = train_df)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.74094 -0.29564 -0.03789  0.33200  0.87326 
+
+Coefficients:
+                  Estimate Std. Error t value Pr(>|t|)    
+(Intercept)        0.08913    0.08769   1.016    0.319    
+FCI_total_EU_lag3 -0.74944    0.09372  -7.997 1.78e-08 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.442 on 26 degrees of freedom
+Multiple R-squared:  0.711,	Adjusted R-squared:  0.6998 
+F-statistic: 63.95 on 1 and 26 DF,  p-value: 1.781e-08
+

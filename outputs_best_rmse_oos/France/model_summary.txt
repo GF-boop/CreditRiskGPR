@@ -1,0 +1,31 @@
+=====================================================
+  Résumé du Meilleur Modèle pour: France 
+=====================================================
+
+Critère de sélection : AIC (sur l'échantillon d'entraînement)
+AIC du modèle sélectionné : 58.87399 
+
+--- Diagnostic de Performance (sur l'échantillon de test) ---
+RMSE (Out-of-Sample) : 0.2077525 
+
+--- Détails du Modèle ---
+
+Call:
+lm(formula = formula, data = train_df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1.6780 -0.2261  0.1196  0.3786  0.9473 
+
+Coefficients:
+                      Estimate Std. Error t value Pr(>|t|)   
+(Intercept)           11.33254    4.93952   2.294  0.03045 * 
+France_HCPI_FAIL_lag4 -0.09380    0.04215  -2.225  0.03532 * 
+FCI_corpo_FR_D_lag0    1.33695    0.46263   2.890  0.00785 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.6352 on 25 degrees of freedom
+Multiple R-squared:  0.2768,	Adjusted R-squared:  0.219 
+F-statistic: 4.785 on 2 and 25 DF,  p-value: 0.0174
+

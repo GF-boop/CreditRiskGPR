@@ -1,0 +1,30 @@
+=====================================================
+  Résumé du Meilleur Modèle pour: Sweden 
+=====================================================
+
+Critère de sélection : AIC (sur l'échantillon d'entraînement)
+AIC du modèle sélectionné : 58.45242 
+
+--- Diagnostic de Performance (sur l'échantillon de test) ---
+RMSE (Out-of-Sample) : 0.9514293 
+
+--- Détails du Modèle ---
+
+Call:
+lm(formula = formula, data = train_df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.9279 -0.5183 -0.1130  0.4424  1.2941 
+
+Coefficients:
+                  Estimate Std. Error t value Pr(>|t|)   
+(Intercept)         0.1997     0.1271   1.571   0.1282   
+FCI_total_EU_lag3  -0.4144     0.1358  -3.051   0.0052 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.6407 on 26 degrees of freedom
+Multiple R-squared:  0.2636,	Adjusted R-squared:  0.2353 
+F-statistic: 9.307 on 1 and 26 DF,  p-value: 0.005202
+

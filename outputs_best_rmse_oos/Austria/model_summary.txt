@@ -1,0 +1,31 @@
+=====================================================
+  Résumé du Meilleur Modèle pour: Austria 
+=====================================================
+
+Critère de sélection : AIC (sur l'échantillon d'entraînement)
+AIC du modèle sélectionné : 72.98679 
+
+--- Diagnostic de Performance (sur l'échantillon de test) ---
+RMSE (Out-of-Sample) : 0.6559212 
+
+--- Détails du Modèle ---
+
+Call:
+lm(formula = formula, data = train_df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1.8011 -0.6580  0.2208  0.4736  1.7159 
+
+Coefficients:
+                       Estimate Std. Error t value Pr(>|t|)   
+(Intercept)             2.90465    5.89103   0.493   0.6263   
+Austria_HCPI_FAIL_lag0  0.17474    0.05271   3.315   0.0028 **
+Austria_HCPI_FAIL_lag4 -0.20290    0.09079  -2.235   0.0346 * 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.8173 on 25 degrees of freedom
+Multiple R-squared:  0.3752,	Adjusted R-squared:  0.3252 
+F-statistic: 7.505 on 2 and 25 DF,  p-value: 0.0028
+

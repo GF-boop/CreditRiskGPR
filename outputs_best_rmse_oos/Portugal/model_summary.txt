@@ -1,0 +1,33 @@
+=====================================================
+  Résumé du Meilleur Modèle pour: Portugal 
+=====================================================
+
+Critère de sélection : AIC (sur l'échantillon d'entraînement)
+AIC du modèle sélectionné : 73.62945 
+
+--- Diagnostic de Performance (sur l'échantillon de test) ---
+RMSE (Out-of-Sample) : 1.159746 
+
+--- Détails du Modèle ---
+
+Call:
+lm(formula = formula, data = train_df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1.7546 -0.4233  0.0834  0.4946  1.2673 
+
+Coefficients:
+                          Estimate Std. Error t value Pr(>|t|)   
+(Intercept)               -0.85213    0.27811  -3.064  0.00550 **
+Portugal_GDP_LD_lag0    -306.51349  105.84757  -2.896  0.00815 **
+Portugal_GDPGROWTH_lag0  315.09934  107.61784   2.928  0.00756 **
+GDPGROWTH_lag1             0.06325    0.02059   3.072  0.00539 **
+GDPGROWTH_lag2             0.03744    0.01572   2.381  0.02593 * 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.8025 on 23 degrees of freedom
+Multiple R-squared:  0.3248,	Adjusted R-squared:  0.2073 
+F-statistic: 2.766 on 4 and 23 DF,  p-value: 0.05176
+

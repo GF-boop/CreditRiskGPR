@@ -65,7 +65,7 @@ for (i in seq_along(data_macro$Date)) {
 
 data_macro$Date <- as.Date(paste(final_year, final_month, "01", sep="-"))
 
-nb_lags <- 2 # The maximum number of lags you want to create.
+nb_lags <- 4 # The maximum number of lags you want to create.
 lag_indices <- 0:nb_lags # This will create lags from 0 (the current value) up to 6.
 
 # 2. Automatically Identify All Covariate Columns to Lag
@@ -244,8 +244,8 @@ compute_model_for_country <- function(country_to_model, country_map_data) {
   best_model <- best_model_info$model
   
   # --- RMSE Calculation and Return (your existing code) ---
-  #predictions_oos <- predict(best_model, newdata = test_df)
-  #rmse_oos <- sqrt(mean((predictions_oos - test_df$Y)^2))
+  predictions_oos <- predict(best_model, newdata = test_df)
+  rmse_oos <- sqrt(mean((predictions_oos - test_df$Y)^2))
   
   return(list(
     country = country_to_model,

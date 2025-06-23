@@ -1,0 +1,31 @@
+=====================================================
+  Résumé du Meilleur Modèle pour: Ireland 
+=====================================================
+
+Critère de sélection : AIC (sur l'échantillon d'entraînement)
+AIC du modèle sélectionné : 64.30056 
+
+--- Diagnostic de Performance (sur l'échantillon de test) ---
+RMSE (Out-of-Sample) : 1.30738 
+
+--- Détails du Modèle ---
+
+Call:
+lm(formula = formula, data = train_df)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.45052 -0.31069 -0.06649  0.48120  1.30950 
+
+Coefficients:
+                  Estimate Std. Error t value Pr(>|t|)  
+(Intercept)       -0.37234    0.14411  -2.584   0.0160 *
+GDPGROWTH_lag0     0.02868    0.01133   2.531   0.0181 *
+EPU_world_LD_lag4 -1.72654    0.77390  -2.231   0.0349 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.6998 on 25 degrees of freedom
+Multiple R-squared:  0.3004,	Adjusted R-squared:  0.2445 
+F-statistic: 5.368 on 2 and 25 DF,  p-value: 0.01149
+

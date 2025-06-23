@@ -1,0 +1,31 @@
+=====================================================
+  Résumé du Meilleur Modèle pour: Luxembourg 
+=====================================================
+
+Critère de sélection : AIC (sur l'échantillon d'entraînement)
+AIC du modèle sélectionné : 69.0765 
+
+--- Diagnostic de Performance (sur l'échantillon de test) ---
+RMSE (Out-of-Sample) : 0.6909155 
+
+--- Détails du Modèle ---
+
+Call:
+lm(formula = formula, data = train_df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1.5048 -0.3121 -0.0908  0.4412  1.5994 
+
+Coefficients:
+                    Estimate Std. Error t value Pr(>|t|)   
+(Intercept)           0.1122     0.1522   0.737  0.46791   
+FCI_total_LU_D_lag4  -1.8184     0.5392  -3.372  0.00243 **
+FCI_total_EU_lag1     0.4792     0.1708   2.805  0.00959 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.7621 on 25 degrees of freedom
+Multiple R-squared:  0.3649,	Adjusted R-squared:  0.3141 
+F-statistic: 7.183 on 2 and 25 DF,  p-value: 0.003431
+

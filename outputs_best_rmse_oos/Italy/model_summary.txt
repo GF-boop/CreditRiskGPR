@@ -1,0 +1,31 @@
+=====================================================
+  Résumé du Meilleur Modèle pour: Italy 
+=====================================================
+
+Critère de sélection : AIC (sur l'échantillon d'entraînement)
+AIC du modèle sélectionné : 83.97141 
+
+--- Diagnostic de Performance (sur l'échantillon de test) ---
+RMSE (Out-of-Sample) : 1.105099 
+
+--- Détails du Modèle ---
+
+Call:
+lm(formula = formula, data = train_df)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.39971 -0.95382  0.04765  0.78251  1.48564 
+
+Coefficients:
+                      Estimate Std. Error t value Pr(>|t|)  
+(Intercept)            -0.4356     0.2177  -2.000   0.0564 .
+Italy_GDP_LD_lag4    -189.2196    85.0542  -2.225   0.0354 *
+Italy_GDPGROWTH_lag4  189.1784    84.7874   2.231   0.0349 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.9944 on 25 degrees of freedom
+Multiple R-squared:  0.1663,	Adjusted R-squared:  0.09966 
+F-statistic: 2.494 on 2 and 25 DF,  p-value: 0.1029
+
