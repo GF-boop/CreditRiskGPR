@@ -1,12 +1,12 @@
 =====================================================
-   Résumé du Meilleur Modèle pour: Austria 
+  Résumé du Meilleur Modèle pour: Austria 
 =====================================================
 
 Critère de sélection : AIC (sur l'échantillon d'entraînement)
-AIC du modèle sélectionné : 61.75001 
+AIC du modèle sélectionné : 65.21543 
 
 --- Diagnostic de Performance (sur l'échantillon de test) ---
-RMSE (Out-of-Sample) : 1.236408 
+RMSE (Out-of-Sample) : 2.20317 
 
 --- Détails du Modèle ---
 
@@ -15,20 +15,19 @@ lm(formula = formula, data = train_df)
 
 Residuals:
      Min       1Q   Median       3Q      Max 
--1.19666 -0.15936  0.00058  0.30868  1.13629 
+-1.50936 -0.22684 -0.03346  0.40286  1.33914 
 
 Coefficients:
-                Estimate Std. Error t value Pr(>|t|)    
-(Intercept)    -0.491726   0.148995  -3.300 0.003260 ** 
-GDP_lag1       -0.027361   0.011576  -2.364 0.027348 *  
-GDP_lag4        0.040366   0.011465   3.521 0.001926 ** 
-GDP_lag5        0.047486   0.011006   4.315 0.000280 ***
-EPU_lag2        0.012951   0.003761   3.443 0.002319 ** 
-FCI_total_lag2 -0.600764   0.150428  -3.994 0.000612 ***
+                       Estimate Std. Error t value Pr(>|t|)    
+(Intercept)             12.9578     5.7321   2.261 0.033557 *  
+Austria_HCPI_FAIL_lag0   0.7606     0.1626   4.677 0.000104 ***
+Austria_HCPI_FAIL_lag2  -0.8732     0.2018  -4.327 0.000249 ***
+FCI_total_EU_lag0       -2.1099     0.6455  -3.268 0.003377 ** 
+FCI_total_EU_lag1        2.2312     0.6834   3.265 0.003407 ** 
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 0.6404 on 22 degrees of freedom
-Multiple R-squared:  0.6624,	Adjusted R-squared:  0.5857 
-F-statistic: 8.633 on 5 and 22 DF,  p-value: 0.0001202
+Residual standard error: 0.6905 on 23 degrees of freedom
+Multiple R-squared:  0.5896,	Adjusted R-squared:  0.5182 
+F-statistic: 8.261 on 4 and 23 DF,  p-value: 0.0002772
 

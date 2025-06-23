@@ -1,12 +1,12 @@
 =====================================================
-   Résumé du Meilleur Modèle pour: Netherlands 
+  Résumé du Meilleur Modèle pour: Netherlands 
 =====================================================
 
 Critère de sélection : AIC (sur l'échantillon d'entraînement)
-AIC du modèle sélectionné : 54.54369 
+AIC du modèle sélectionné : 39.56752 
 
 --- Diagnostic de Performance (sur l'échantillon de test) ---
-RMSE (Out-of-Sample) : 1.7331 
+RMSE (Out-of-Sample) : 4.865788 
 
 --- Détails du Modèle ---
 
@@ -15,20 +15,19 @@ lm(formula = formula, data = train_df)
 
 Residuals:
      Min       1Q   Median       3Q      Max 
--1.03364 -0.43070  0.05064  0.34419  0.95168 
+-0.69134 -0.32012 -0.03752  0.26815  0.74350 
 
 Coefficients:
-                Estimate Std. Error t value Pr(>|t|)    
-(Intercept)    -0.663226   0.131131  -5.058 4.58e-05 ***
-GDP_lag3        0.029026   0.009569   3.033 0.006103 ** 
-GDP_lag4        0.042017   0.010259   4.096 0.000478 ***
-EPU_lag2        0.008245   0.003040   2.713 0.012713 *  
-EPU_lag5       -0.012612   0.002941  -4.289 0.000298 ***
-FCI_total_lag1 -0.748215   0.125171  -5.978 5.14e-06 ***
+                             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                   -0.9276     0.1069  -8.679 1.03e-08 ***
+Netherlands_GDPGROWTH_D_lag4   2.7832     1.0396   2.677  0.01346 *  
+FCI_corpo_NT_D_lag2           73.6899     6.5610  11.231 8.18e-11 ***
+FCI_total_NT_D_lag2          -74.0705     6.6394 -11.156 9.34e-11 ***
+EPU_world_LD_lag1              1.5673     0.5080   3.085  0.00523 ** 
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 0.5631 on 22 degrees of freedom
-Multiple R-squared:  0.7635,	Adjusted R-squared:  0.7098 
-F-statistic: 14.21 on 5 and 22 DF,  p-value: 2.888e-06
+Residual standard error: 0.4368 on 23 degrees of freedom
+Multiple R-squared:  0.8512,	Adjusted R-squared:  0.8254 
+F-statistic:  32.9 on 4 and 23 DF,  p-value: 3.285e-09
 

@@ -1,12 +1,12 @@
 =====================================================
-   Résumé du Meilleur Modèle pour: Italy 
+  Résumé du Meilleur Modèle pour: Italy 
 =====================================================
 
 Critère de sélection : AIC (sur l'échantillon d'entraînement)
-AIC du modèle sélectionné : 60.84712 
+AIC du modèle sélectionné : 45.07108 
 
 --- Diagnostic de Performance (sur l'échantillon de test) ---
-RMSE (Out-of-Sample) : 2.214931 
+RMSE (Out-of-Sample) : 2.413888 
 
 --- Détails du Modèle ---
 
@@ -14,17 +14,20 @@ Call:
 lm(formula = formula, data = train_df)
 
 Residuals:
-     Min       1Q   Median       3Q      Max 
--1.13044 -0.34820 -0.03603  0.24866  1.88334 
+    Min      1Q  Median      3Q     Max 
+-0.8357 -0.3098  0.0003  0.2942  0.9857 
 
 Coefficients:
-               Estimate Std. Error t value Pr(>|t|)    
-(Intercept)     -0.4266     0.1317  -3.238  0.00328 ** 
-FCI_total_lag0  -0.8908     0.1403  -6.350 1.01e-06 ***
+                    Estimate Std. Error t value Pr(>|t|)    
+(Intercept)          -0.6262     0.1023  -6.121 3.04e-06 ***
+FCI_house_IT_D_lag4   1.5638     0.6168   2.535  0.01849 *  
+FCI_total_IT_lag3    -2.1732     0.4291  -5.064 3.98e-05 ***
+FCI_total_EU_lag0    -0.7606     0.1013  -7.511 1.24e-07 ***
+FCI_total_EU_lag4     1.2528     0.3761   3.331  0.00291 ** 
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 0.6687 on 26 degrees of freedom
-Multiple R-squared:  0.608,	Adjusted R-squared:  0.5929 
-F-statistic: 40.32 on 1 and 26 DF,  p-value: 1.005e-06
+Residual standard error: 0.4819 on 23 degrees of freedom
+Multiple R-squared:  0.8199,	Adjusted R-squared:  0.7885 
+F-statistic: 26.17 on 4 and 23 DF,  p-value: 2.867e-08
 

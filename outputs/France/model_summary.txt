@@ -1,12 +1,12 @@
 =====================================================
-   Résumé du Meilleur Modèle pour: France 
+  Résumé du Meilleur Modèle pour: France 
 =====================================================
 
 Critère de sélection : AIC (sur l'échantillon d'entraînement)
-AIC du modèle sélectionné : 38.67335 
+AIC du modèle sélectionné : 8.616802 
 
 --- Diagnostic de Performance (sur l'échantillon de test) ---
-RMSE (Out-of-Sample) : 1.72773 
+RMSE (Out-of-Sample) : 1.634703 
 
 --- Détails du Modèle ---
 
@@ -14,18 +14,20 @@ Call:
 lm(formula = formula, data = train_df)
 
 Residuals:
-    Min      1Q  Median      3Q     Max 
--0.7651 -0.2527  0.0269  0.2258  0.8214 
+     Min       1Q   Median       3Q      Max 
+-0.45757 -0.08274 -0.02504  0.12388  0.42899 
 
 Coefficients:
-               Estimate Std. Error t value Pr(>|t|)    
-(Intercept)     0.29730    0.08802   3.378   0.0024 ** 
-FCI_total_lag0  0.23853    0.09970   2.393   0.0246 *  
-FCI_total_lag4 -0.74257    0.10935  -6.791 4.06e-07 ***
+                      Estimate Std. Error t value Pr(>|t|)    
+(Intercept)           18.93469    2.03437   9.307 2.91e-09 ***
+France_HCPI_FAIL_lag4 -0.15902    0.01737  -9.153 3.95e-09 ***
+FCI_corpo_FR_D_lag4    1.18776    0.37958   3.129 0.004710 ** 
+FCI_gov_FR_lag3        0.43200    0.09885   4.370 0.000224 ***
+FCI_total_EU_lag4     -0.99736    0.07989 -12.484 1.00e-11 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 0.4428 on 25 degrees of freedom
-Multiple R-squared:  0.6485,	Adjusted R-squared:  0.6204 
-F-statistic: 23.06 on 2 and 25 DF,  p-value: 2.109e-06
+Residual standard error: 0.2513 on 23 degrees of freedom
+Multiple R-squared:  0.8958,	Adjusted R-squared:  0.8777 
+F-statistic: 49.46 on 4 and 23 DF,  p-value: 5.709e-11
 

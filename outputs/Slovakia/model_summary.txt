@@ -1,12 +1,12 @@
 =====================================================
-   Résumé du Meilleur Modèle pour: Slovakia 
+  Résumé du Meilleur Modèle pour: Slovakia 
 =====================================================
 
 Critère de sélection : AIC (sur l'échantillon d'entraînement)
-AIC du modèle sélectionné : 44.68079 
+AIC du modèle sélectionné : -4.644199 
 
 --- Diagnostic de Performance (sur l'échantillon de test) ---
-RMSE (Out-of-Sample) : 2.764753 
+RMSE (Out-of-Sample) : 0.3919348 
 
 --- Détails du Modèle ---
 
@@ -15,19 +15,19 @@ lm(formula = formula, data = train_df)
 
 Residuals:
      Min       1Q   Median       3Q      Max 
--0.88222 -0.22029  0.02095  0.24719  0.86567 
+-0.35510 -0.07566  0.00397  0.06717  0.32986 
 
 Coefficients:
-            Estimate Std. Error t value Pr(>|t|)    
-(Intercept) -0.66346    0.09767  -6.793 6.29e-07 ***
-INF_lag1     0.14049    0.03388   4.146 0.000391 ***
-INF_lag2     0.20330    0.03687   5.514 1.32e-05 ***
-INF_lag3     0.18496    0.04363   4.239 0.000311 ***
-INF_lag4     0.15523    0.04209   3.688 0.001217 ** 
+                        Estimate Std. Error t value Pr(>|t|)    
+(Intercept)             -6.27369    1.24465  -5.041 4.22e-05 ***
+Slovakia_GDP_LD_lag3    -1.27311    0.60888  -2.091  0.04778 *  
+Slovakia_HCPI_FAIL_lag0  0.13994    0.02582   5.420 1.66e-05 ***
+Slovakia_HCPI_FAIL_lag2 -0.09719    0.03470  -2.801  0.01014 *  
+FCI_total_EU_lag0        0.14823    0.04241   3.495  0.00195 ** 
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 0.4785 on 23 degrees of freedom
-Multiple R-squared:  0.5985,	Adjusted R-squared:  0.5286 
-F-statistic:  8.57 on 4 and 23 DF,  p-value: 0.0002185
+Residual standard error: 0.1983 on 23 degrees of freedom
+Multiple R-squared:  0.931,	Adjusted R-squared:  0.919 
+F-statistic: 77.62 on 4 and 23 DF,  p-value: 5.165e-13
 

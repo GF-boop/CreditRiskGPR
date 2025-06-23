@@ -1,12 +1,12 @@
 =====================================================
-   Résumé du Meilleur Modèle pour: Poland 
+  Résumé du Meilleur Modèle pour: Poland 
 =====================================================
 
 Critère de sélection : AIC (sur l'échantillon d'entraînement)
-AIC du modèle sélectionné : 28.33427 
+AIC du modèle sélectionné : 35.29785 
 
 --- Diagnostic de Performance (sur l'échantillon de test) ---
-RMSE (Out-of-Sample) : 1.065094 
+RMSE (Out-of-Sample) : 0.4548187 
 
 --- Détails du Modèle ---
 
@@ -14,21 +14,19 @@ Call:
 lm(formula = formula, data = train_df)
 
 Residuals:
-     Min       1Q   Median       3Q      Max 
--0.49739 -0.18272 -0.01954  0.17868  0.95509 
+    Min      1Q  Median      3Q     Max 
+-0.7147 -0.3551  0.1206  0.2823  0.6354 
 
 Coefficients:
-                Estimate Std. Error t value Pr(>|t|)    
-(Intercept)     0.189687   0.077703   2.441 0.023145 *  
-GDP_lag6       -0.019772   0.008433  -2.345 0.028479 *  
-INF_lag4        0.074154   0.028365   2.614 0.015836 *  
-INF_lag5        0.087409   0.030365   2.879 0.008723 ** 
-EPU_lag6       -0.010809   0.002345  -4.608 0.000137 ***
-FCI_total_lag1 -0.722457   0.075708  -9.543 2.81e-09 ***
+                      Estimate Std. Error t value Pr(>|t|)    
+(Intercept)           0.038328   0.085815   0.447   0.6591    
+Poland_UNEMP_DD_lag0 -0.680519   0.319882  -2.127   0.0439 *  
+FCI_total_EU_lag3    -0.688531   0.090753  -7.587 7.96e-08 ***
+GDPGROWTH_lag2        0.016053   0.007644   2.100   0.0464 *  
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 0.3526 on 22 degrees of freedom
-Multiple R-squared:  0.8444,	Adjusted R-squared:  0.809 
-F-statistic: 23.87 on 5 and 22 DF,  p-value: 3.323e-08
+Residual standard error: 0.4106 on 24 degrees of freedom
+Multiple R-squared:  0.7698,	Adjusted R-squared:  0.741 
+F-statistic: 26.75 on 3 and 24 DF,  p-value: 7.935e-08
 

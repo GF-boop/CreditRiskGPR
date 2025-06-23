@@ -1,12 +1,12 @@
 =====================================================
-   Résumé du Meilleur Modèle pour: Luxembourg 
+  Résumé du Meilleur Modèle pour: Luxembourg 
 =====================================================
 
 Critère de sélection : AIC (sur l'échantillon d'entraînement)
-AIC du modèle sélectionné : 75.38867 
+AIC du modèle sélectionné : 45.20862 
 
 --- Diagnostic de Performance (sur l'échantillon de test) ---
-RMSE (Out-of-Sample) : 1.393838 
+RMSE (Out-of-Sample) : 3.537071 
 
 --- Détails du Modèle ---
 
@@ -14,21 +14,20 @@ Call:
 lm(formula = formula, data = train_df)
 
 Residuals:
-    Min      1Q  Median      3Q     Max 
--1.4050 -0.4145 -0.1281  0.3396  1.7454 
+     Min       1Q   Median       3Q      Max 
+-1.07272 -0.18626 -0.04868  0.32858  0.83797 
 
 Coefficients:
-               Estimate Std. Error t value Pr(>|t|)   
-(Intercept)    -0.02788    0.16657  -0.167  0.86862   
-INF_lag2        0.17047    0.07663   2.225  0.03668 * 
-INF_lag3        0.28320    0.09563   2.961  0.00721 **
-INF_lag4        0.33196    0.10599   3.132  0.00485 **
-INF_lag5        0.28486    0.09150   3.113  0.00507 **
-FCI_total_lag5  0.82924    0.29856   2.777  0.01098 * 
+                    Estimate Std. Error t value Pr(>|t|)    
+(Intercept)          -0.1391     0.1040  -1.338    0.194    
+FCI_house_LU_D_lag3  -5.9651     0.7368  -8.096 3.49e-08 ***
+FCI_corpo_LU_D_lag0  -1.6671     0.3180  -5.243 2.56e-05 ***
+FCI_gov_LU_DD_lag2    1.0420     0.4312   2.417    0.024 *  
+FCI_total_EU_lag1     1.0004     0.1386   7.216 2.40e-07 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 0.817 on 22 degrees of freedom
-Multiple R-squared:  0.3578,	Adjusted R-squared:  0.2118 
-F-statistic: 2.451 on 5 and 22 DF,  p-value: 0.0655
+Residual standard error: 0.4831 on 23 degrees of freedom
+Multiple R-squared:  0.7653,	Adjusted R-squared:  0.7244 
+F-statistic: 18.75 on 4 and 23 DF,  p-value: 5.662e-07
 

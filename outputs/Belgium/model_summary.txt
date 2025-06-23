@@ -1,12 +1,12 @@
 =====================================================
-   Résumé du Meilleur Modèle pour: Belgium 
+  Résumé du Meilleur Modèle pour: Belgium 
 =====================================================
 
 Critère de sélection : AIC (sur l'échantillon d'entraînement)
-AIC du modèle sélectionné : 47.06109 
+AIC du modèle sélectionné : 38.95519 
 
 --- Diagnostic de Performance (sur l'échantillon de test) ---
-RMSE (Out-of-Sample) : 1.321409 
+RMSE (Out-of-Sample) : 0.8487536 
 
 --- Détails du Modèle ---
 
@@ -15,20 +15,19 @@ lm(formula = formula, data = train_df)
 
 Residuals:
      Min       1Q   Median       3Q      Max 
--1.03221 -0.33527  0.01821  0.30229  0.91155 
+-0.86735 -0.23497  0.06513  0.27164  0.57516 
 
 Coefficients:
-                Estimate Std. Error t value Pr(>|t|)    
-(Intercept)    -0.183964   0.104829  -1.755  0.09320 .  
-GDP_lag0        0.024467   0.009523   2.569  0.01749 *  
-EPU_lag1       -0.006126   0.002785  -2.200  0.03863 *  
-EPU_lag6        0.007168   0.002881   2.488  0.02091 *  
-FCI_total_lag0  0.859714   0.126647   6.788 8.05e-07 ***
-FCI_total_lag5 -0.454704   0.133370  -3.409  0.00251 ** 
+                     Estimate Std. Error t value Pr(>|t|)    
+(Intercept)           0.03163    0.09030   0.350  0.72933    
+FCI_house_BE_D_lag2   1.20496    0.55706   2.163  0.04117 *  
+FCI_corpo_BE_D_lag4 -43.71611   15.03280  -2.908  0.00792 ** 
+FCI_total_BE_D_lag4  44.63586   15.10024   2.956  0.00708 ** 
+FCI_total_EU_lag0     0.54898    0.09623   5.705 8.26e-06 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 0.4926 on 22 degrees of freedom
-Multiple R-squared:  0.6976,	Adjusted R-squared:  0.6289 
-F-statistic: 10.15 on 5 and 22 DF,  p-value: 3.83e-05
+Residual standard error: 0.432 on 23 degrees of freedom
+Multiple R-squared:  0.7569,	Adjusted R-squared:  0.7146 
+F-statistic:  17.9 on 4 and 23 DF,  p-value: 8.399e-07
 

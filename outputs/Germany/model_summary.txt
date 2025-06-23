@@ -1,12 +1,12 @@
 =====================================================
-   Résumé du Meilleur Modèle pour: Germany 
+  Résumé du Meilleur Modèle pour: Germany 
 =====================================================
 
 Critère de sélection : AIC (sur l'échantillon d'entraînement)
-AIC du modèle sélectionné : 58.58535 
+AIC du modèle sélectionné : 26.12824 
 
 --- Diagnostic de Performance (sur l'échantillon de test) ---
-RMSE (Out-of-Sample) : 1.931569 
+RMSE (Out-of-Sample) : 1.986588 
 
 --- Détails du Modèle ---
 
@@ -14,17 +14,20 @@ Call:
 lm(formula = formula, data = train_df)
 
 Residuals:
-    Min      1Q  Median      3Q     Max 
--1.1865 -0.4279  0.1141  0.3464  1.0224 
+     Min       1Q   Median       3Q      Max 
+-0.57159 -0.21935  0.01808  0.14345  0.85321 
 
 Coefficients:
-               Estimate Std. Error t value Pr(>|t|)    
-(Intercept)     -0.3945     0.1274  -3.097  0.00465 ** 
-FCI_total_lag2  -0.7914     0.1362  -5.813    4e-06 ***
+                    Estimate Std. Error t value Pr(>|t|)    
+(Intercept)         -0.17082    0.07938  -2.152  0.04214 *  
+FCI_house_GE_D_lag0 -2.58911    0.72581  -3.567  0.00164 ** 
+FCI_gov_GE_lag1      1.92420    0.19113  10.068 6.73e-10 ***
+FCI_gov_GE_lag4      1.19540    0.25233   4.737 8.96e-05 ***
+FCI_total_EU_lag0   -1.65977    0.17866  -9.290 3.01e-09 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 0.6422 on 26 degrees of freedom
-Multiple R-squared:  0.5651,	Adjusted R-squared:  0.5484 
-F-statistic: 33.79 on 1 and 26 DF,  p-value: 3.997e-06
+Residual standard error: 0.3436 on 23 degrees of freedom
+Multiple R-squared:  0.8899,	Adjusted R-squared:  0.8707 
+F-statistic: 46.46 on 4 and 23 DF,  p-value: 1.077e-10
 

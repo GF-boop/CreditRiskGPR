@@ -1,12 +1,12 @@
 =====================================================
-   Résumé du Meilleur Modèle pour: Spain 
+  Résumé du Meilleur Modèle pour: Spain 
 =====================================================
 
 Critère de sélection : AIC (sur l'échantillon d'entraînement)
-AIC du modèle sélectionné : 80.51786 
+AIC du modèle sélectionné : 30.42361 
 
 --- Diagnostic de Performance (sur l'échantillon de test) ---
-RMSE (Out-of-Sample) : 1.148348 
+RMSE (Out-of-Sample) : 1.644723 
 
 --- Détails du Modèle ---
 
@@ -14,18 +14,20 @@ Call:
 lm(formula = formula, data = train_df)
 
 Residuals:
-    Min      1Q  Median      3Q     Max 
--1.8817 -0.2803  0.2791  0.5243  1.4717 
+     Min       1Q   Median       3Q      Max 
+-0.50210 -0.17681 -0.02204  0.12970  1.08966 
 
 Coefficients:
-               Estimate Std. Error t value Pr(>|t|)  
-(Intercept)     -0.1775     0.1862  -0.953   0.3495  
-FCI_total_lag0  -0.5340     0.2339  -2.283   0.0312 *
-FCI_total_lag3   0.6465     0.2421   2.670   0.0131 *
+                    Estimate Std. Error t value Pr(>|t|)    
+(Intercept)          6.18122    0.48909  12.638 7.80e-12 ***
+Spain_UNEMP_lag4    -0.37176    0.02809 -13.235 3.05e-12 ***
+FCI_house_SP_D_lag0 -0.92652    0.29061  -3.188 0.004092 ** 
+FCI_corpo_SP_D_lag1 -1.12880    0.25819  -4.372 0.000223 ***
+FCI_total_SP_D_lag3 -0.72303    0.25846  -2.797 0.010231 *  
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 0.9349 on 25 degrees of freedom
-Multiple R-squared:  0.2449,	Adjusted R-squared:  0.1844 
-F-statistic: 4.053 on 2 and 25 DF,  p-value: 0.02988
+Residual standard error: 0.371 on 23 degrees of freedom
+Multiple R-squared:  0.8906,	Adjusted R-squared:  0.8716 
+F-statistic: 46.81 on 4 and 23 DF,  p-value: 9.984e-11
 
