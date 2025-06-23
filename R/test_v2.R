@@ -65,7 +65,7 @@ for (i in seq_along(data_macro$Date)) {
 
 data_macro$Date <- as.Date(paste(final_year, final_month, "01", sep="-"))
 
-nb_lags <- 4 # The maximum number of lags you want to create.
+nb_lags <- 2 # The maximum number of lags you want to create.
 lag_indices <- 0:nb_lags # This will create lags from 0 (the current value) up to 6.
 
 # 2. Automatically Identify All Covariate Columns to Lag
@@ -206,12 +206,27 @@ compute_model_for_country <- function(country_to_model, country_map_data) {
   
   
   model_results <- lapply(combs, function(vars) {
-    formula <- as.formula(paste("Y ~", paste(vars, collapse = " + ")))
-    model <- lm(formula, data = train_df)
-    p_values <- summary(model)$coefficients[-1, "Pr(>|t|)"]
-    if (any(is.na(p_values)) || any(p_values > P_VALUE_THRESHOLD)) return(NULL) # Added NA check
-    list(model = model, vars = vars, aic = AIC(model))
-  })
+      formula <- as.formula(paste("Y ~", paste(vars, collapse = " + ")))
+      model <- lm(formula, data = train_df)
+      p_values <- summary(model)$coefficients[-1, "Pr(>|t|)"]
+      
+      # P-value significance check (unchanged)
+      if (any(is.na(p_values)) || any(p_values > P_VALUE_THRESHOLD)) {
+        return(NULL)
+      }
+      
+      # --- NEW: Calculate OOS RMSE for this specific model ---
+      predictions_oos <- predict(model, newdata = test_df)
+      rmse_oos <- sqrt(mean((predictions_oos - test_df$Y)^2, na.rm = TRUE)) # na.rm is a good safety net
+      
+      # --- MODIFIED: Add rmse_oos to the list of results for this model ---
+      list(
+        model = model, 
+        vars = vars, 
+        aic = AIC(model), # Keep AIC for info
+        rmse_oos = rmse_oos # The new, crucial element for selection
+      )
+    })
   
   valid_models <- Filter(Negate(is.null), model_results)
   valid_models <- Filter(Negate(is.null), model_results)
@@ -229,8 +244,8 @@ compute_model_for_country <- function(country_to_model, country_map_data) {
   best_model <- best_model_info$model
   
   # --- RMSE Calculation and Return (your existing code) ---
-  predictions_oos <- predict(best_model, newdata = test_df)
-  rmse_oos <- sqrt(mean((predictions_oos - test_df$Y)^2))
+  #predictions_oos <- predict(best_model, newdata = test_df)
+  #rmse_oos <- sqrt(mean((predictions_oos - test_df$Y)^2))
   
   return(list(
     country = country_to_model,
